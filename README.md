@@ -1,7 +1,5 @@
 ## Alignment of distant slices of spatially resolved transcriptomics with graph learning model
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10369465.svg)](https://doi.org/10.5281/zenodo.10369465)
-
 ###  Yu Wang, Zaiyi Liu, Quan Wang, Xiaoke Ma
 
 AlignDG is the first network-based model for aligning distant slices without prior information, covering scenarios such as non-consecutive, non-continuous, across different tissues and diseases conditions that cannot be properly handled with available methods. Furthermore, AlignDG joints feature learning and slice alignment, where features are learned under the guidance of alignment, thereby improving discriminative and quality of features. Extensive experimental results demonstrate the superiority of AlignDG over existing state-of-the-art in terms of precision, robustness and efficiency. AlignDG precisely tracks development of tissues from spatial-temporal slices by only using approximately 50% slices in datasets, which provides biologists with a new perspective to design experiments and analyze SRT data.
