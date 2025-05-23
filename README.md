@@ -91,7 +91,7 @@ We also acknowledge the authors who provided source code and data which inspire 
 
 We are continuing adding new features. Bug reports or feature requests are welcome.
 
-Last update: 01/24/2025, version 1.0.0
+Last update: 05/24/2025, version 1.0.0
 
 Please send any questions or found bugs to Xiaoke Ma [xkma@xidian.edu.cn](mailto:xkma@xidian.edu.cn).
 
