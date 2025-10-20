@@ -1,40 +1,52 @@
-## Alignment of distant slices of spatially resolved transcriptomics with graph learning model
+## Alignment of spatial transcriptomics slices across diseases, platforms and conditions
 
 ###  Yu Wang, Zaiyi Liu, Qingchen Zhang, Xiaoke Ma
 
-AlignDG is the first network-based model for aligning distant slices without prior information, covering scenarios such as non-consecutive, non-continuous, across different tissues and diseases conditions that cannot be properly handled with available methods. Furthermore, AlignDG joints feature learning and slice alignment, where features are learned under the guidance of alignment, thereby improving discriminative and quality of features. Extensive experimental results demonstrate the superiority of AlignDG over existing state-of-the-art in terms of precision, robustness and efficiency. AlignDG precisely tracks development of tissues from spatial-temporal slices by only using approximately 50% slices in datasets, which provides biologists with a new perspective to design experiments and analyze SRT data.
+AlignDG is the network-based model for aligning distant slices without prior information, covering scenarios such as non-consecutive, non-continuous, across different tissues and diseases conditions that cannot be properly handled with available methods. Furthermore, AlignDG joints feature learning and slice alignment, where features are learned under the guidance of alignment, thereby improving discriminative and quality of features. Extensive experimental results demonstrate the superiority of AlignDG over existing state-of-the-art in terms of precision, robustness and efficiency. AlignDG precisely tracks development of tissues from spatial-temporal slices by only using approximately 50% slices in datasets, which provides biologists with a new perspective to design experiments and analyze spatial transcriptomics data.
 
-![AlignDG workflow](docs/AlignDG.png)
+![AlignDG workflow](https://raw.githubusercontent.com/xkmaxidian/AlignDG/master/docs/AlignDG.png)
 
 # Installation
 
-#### <font color='red'>To accelerate AlignDG by using GPU: If you have an NVIDIA GPU and using Linux OS, please install Pytorch and jaxlib-cuda in previous, the CPU version of them will be installed by default for you. Here is the [installation guide of PyTorch](https://pytorch.org/get-started/locally/) and the [installation guide of jaxlib](https://jax.readthedocs.io/en/latest/installation.html).</font>
+##### (Note: To accelerate AlignDG by using GPU: If you have an NVIDIA GPU and using Linux OS, please install Pytorch and jaxlib-cuda in previous, the CPU version of them will be installed by default for you. Here is the [installation guide of PyTorch](https://pytorch.org/get-started/locally/) and the [installation guide of jaxlib](https://jax.readthedocs.io/en/latest/installation.html))
+
+### The detailed tutorials for install AlginDG is available at: https://aligndg-tutorials.readthedocs.io/en/latest/Installation.html
 
 #### 1. Start by using python virtual environment with [conda](https://anaconda.org/):
 
 ```
-conda create --name aligndg python=3.10
-conda activate aligndg
+conda create --name aligndg_py python=3.10
+conda activate aligndg_py
 ```
 
-(Optional) To run the notebook files in tutorials, please ensure the Jupyter package is installed in your environment:
+Note: If you encounter the error message "ImportError: Please install the skmisc package via `pip install --user scikit-misc`" while executing `sc.pp.highly_variable_genes(adata, flavor='seurat_v3', n_top_genes=3000)`, please execute the following command in your terminal: `pip install --user scikit-misc`.
 
+Then, you can install AlignDG via Pypi:
+
+```python
+pip install aligndg
 ```
-conda install -n aligndg ipykernel
-python -m ipykernel install --user --name mnmst --display-name aligndg-jupyter
-```
 
-Note: If you encounter the error message "ImportError: Please install the skmisc package via `pip install --user scikit-misc`" while executing `sc.pp.highly_variable_genes(adata, flavor='seurat_v3', n_top_genes=3000)`, please execute the following command in your terminal: `pip install -i https://test.pypi.org/simple/ scikit-misc==0.2.0rc1`.
 
-### 2. From GitHub
+
+### 2. From source code (Github)
 
 ```
 git clone https://github.com/xkmaxidian/AlignDG.git
+cd your_dir/AlignDG/AlignDG_package
+python setup.py build
+python setup.py install
 ```
+
+
 
 ## Tutorial
 
-The jupyter Notebooks of the tutorial for the balanced simulate data (data 1 and 2) are accessible from : 
+1. Tutorial documentation for AlignDG  generated using `ReadTheDocs`is accessible from: https://aligndg-tutorials.readthedocs.io/en.
+
+2. The tutorials for AlignDG source code are summarized as:
+
+The jupyter Notebooks of the tutorial for the balanced simulate data (data 1 and 2) are also accessible from : 
 
 https://github.com/xkmaxidian/AlignDG/blob/master/Tutorials/Tutorials_Simulate1_Banalced.ipynb
 
@@ -61,7 +73,9 @@ Tutorials for AlignDG on multiple slices and 3D reconstruction are accessible fr
 
 
 
-Please install **jupyter notebook** in order to open this notebook.
+Note: Please install **jupyter notebook** in order to open this notebook.
+
+
 
 ## Compared slice alignment algorithms in this paper:
 
@@ -92,6 +106,8 @@ We also acknowledge the authors who provided source code and data which inspire 
 We are continuing adding new features. Bug reports or feature requests are welcome.
 
 Last update: 05/24/2025, version 1.0.0
+=======
+Last update: 10/20/2025, version 1.0.1
 
 Please send any questions or found bugs to Xiaoke Ma [xkma@xidian.edu.cn](mailto:xkma@xidian.edu.cn).
 
