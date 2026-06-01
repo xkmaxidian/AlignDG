@@ -105,13 +105,15 @@ We also acknowledge the authors who provided source code and data which inspire 
 
 We are continuing adding new features. Bug reports or feature requests are welcome.
 
-Last update: 05/24/2025, version 1.0.0
-=======
-Last update: 10/20/2025, version 1.0.1
+
+
+### Last update: 10/20/2025, version 1.0.1
 
 Please send any questions or found bugs to Xiaoke Ma [xkma@xidian.edu.cn](mailto:xkma@xidian.edu.cn).
 
 ### Reference
 
-Our paper is under review.
+Please consider citing the following reference:
+
+- [https://link.springer.com/article/10.1186/s13073-026-01634-w](https://doi.org/10.1186/s13073-026-01634-w)
 
